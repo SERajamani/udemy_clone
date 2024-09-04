@@ -16,7 +16,12 @@ body {
     border-bottom: 1px solid white;
 gap:10px;
 
-align-items:center
+align-items:center;
+position: sticky;
+top: 0;
+z-index: 1;
+background-color: white;
+
 }
 
 .navbar__s1__title {
@@ -39,6 +44,7 @@ align-items: center;
     border: none;
     width: 100%;
     font-size: 16px;
+    background-color: transparent;
 
 }
 
@@ -53,6 +59,26 @@ align-items: center;
     cursor: pointer;
 }
 
+/* My Learning popup */
+.mylearning {
+    position: relative;
+    cursor: pointer;
+}
+.mylearning__popup {
+
+    position: absolute;
+    background-color: white;
+    border: 2px solid black;
+    width: 100px;
+    top: 150%;
+    padding: 20px;
+    right: 0;
+    display: none;
+}
+
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
 .categories {
     display: flex;
     padding: 10px;
@@ -75,9 +101,25 @@ align-items: center;
     cursor: pointer;
 }
 
+.sale-image {
+    position: relative;
+}
+.sale-image__offer {
+    width: 35%;
+    border: 2px solid black;
+    background-color: white;
+    padding: 2%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+
+   
+}
 .sale-image img {
     width: 100%;
 }
+
+
 
 .recommended {
     padding: 10px;
