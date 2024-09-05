@@ -93,13 +93,19 @@ align-items: center;
     color: white;
     padding: 10px;
     border-radius:30px ;
+    border: 1px solid #A435F6;
 }
 
 .categories p:hover {
-    background-color: #9307f7;
-    color: white;
+
+    transition: 1s;
+    background-color: transparent;
+    color: black;
     cursor: pointer;
+    border: 1px solid #A435F6;
 }
+
+
 
 .sale-image {
     position: relative;
@@ -112,8 +118,24 @@ align-items: center;
     position: absolute;
     top: 20%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 1s;
 
+opacity: 0;
+animation-fill-mode: forwards;
    
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
 }
 .sale-image img {
     width: 100%;
